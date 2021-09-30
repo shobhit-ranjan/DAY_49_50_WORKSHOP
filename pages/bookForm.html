@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Address Book</title>
+    <link rel="stylesheet" href="../css/bookForm.css">
+    <script defer src="../js/addressForm.js"></script>
+    <script defer src="../js/AddressBookData.js"></script>
+    <script defer src="../js/site_properties.js"></script>
+</head>
+
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/images/logo.png" alt="Logo">
+            <div>
+                <span class="add-text">ADDRESS</span><br>
+                <span class="add-text add-book">BOOK</span>
+            </div>
+        </div>
+    </header>
+    <div class="form-content">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)">
+            <div class="form-head">
+                <h2>PERSON ADDRESS FORM</h2>
+            </div>
+            <div class="form-items">
+                <div class="row-content">
+                    <label for="text"> Full Name</label>
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                        <error-output class="text-error" for="text"></error-output>
+                    </div>
+                </div>
+                <div class="row-content">
+                    <label for="number"> Phone Number</label>
+                    <div>
+                        <input type="text" id="number" name="number" placeholder="Enter Phone Number" required>
+                        <error-output class="number-error" for="number"></error-output>
+                    </div>
+                </div>
+                <div class="row-content">
+                    <label for="address"> Address</label>
+                    <div>
+                        <input type="add" id="address" name="address" placeholder="Enter address" required>
+                        <error-output class="address-error" for="address"></error-output>
+                    </div>
+                </div>
+                <div class="row-content">
+                    <div class="location">
+                        <input type="location" id="city" name="city" placeholder="Enter city" required>
+                        <input type="location" id="state" name="state" placeholder="Enter state" required>
+                        <input type="location" id="zip" name="zip" placeholder="Enter zip" required>
+                        <error-output class="location-error" for="location"></error-output>
+                    </div>
+                </div>
+                <div class="buttonParent">
+                    <a href="./addBookHome.html" class="resetButton button cancelButton">Cancel</a>
+                    <div class="submit-reset">
+                        <button class="submitButton button" type="submit" id="submit">Add</button>
+                        <button class="resetButton button" type="reset" id="reset">Reset</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </form>
+    </div>
+</body>
+
+</html>
